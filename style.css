@@ -26,6 +26,8 @@ body {
     background-color: transparent;
     height: 10vh;
     width: 10vw;
+    transition: all 0.5s ease-in-out;
+    margin-right: 5%;
 }
 
 .header h1 {
@@ -33,6 +35,13 @@ body {
     background-color:  transparent;
     font-size: 2em;
     text-shadow: 1px 2px 5px black;
+}
+
+.header .logo:hover {
+    height: 13vh;
+    width: 13vw;
+    transform: rotate(-12deg) translate(0px,30px);
+    margin-right: -11%;
 }
 
 /***************************************************************************/
@@ -50,14 +59,17 @@ body {
 .card {
     border: 2px solid #8D8DAA;
     border-radius: 8px;
-    width: 22vw;
-    margin: 3vh 5vw;
+    width: 25vw;
+    margin: 3vh 1vw;
     display: flex;
     flex-direction: column;
-    justify-content: space-evenly;
+    justify-content: space-between;
     align-items: center;
-    background-color: #DFDFDE;
     box-shadow: 1px 1px 5px black;
+    transition: all 0.3s ease-in;
+    min-width: 300px;
+    min-height: 10vh;
+    padding-bottom: 3%;
 }
 
 .card h2 {
@@ -66,10 +78,11 @@ body {
 }
 
 .card:hover {
-    background-color: #dfdfdea8;
+    /* background-color: #dfdfdea8; */
+    background-color: #6969a110;
+
     transform: translate(-2px, -2px);
     transition-duration: 0.2s;
-
     box-shadow: 2px 2px 5px black;
 }
 
@@ -80,7 +93,6 @@ body {
 .dog-pic img {
     width: 20vw;
     height: auto;
-    margin-bottom: 4vw;
     border: 1px solid #8D8DAA;
     box-shadow: 1px 1px 5px black;
     border-radius: 8px;
@@ -96,7 +108,7 @@ body {
 }
 
 #timer {
-    margin-top: 50%;
+    margin-top: 40%;
     font-size: 2vw;
 }
 
@@ -107,7 +119,7 @@ body {
 }
 
 .reasons > .card-content {
-    margin-top: 30%;
+    margin-top: 40%;
 }
 
 /***************************************************************************/
@@ -115,7 +127,8 @@ body {
 /***************************************************************************/
 
 .footer {
-    background-color: #DFDFDE;
+    background-color: #8D8DAA;
+    border: 1px solid black;
     height: 10vh;
     display: flex;
     justify-content: flex-end;
@@ -125,4 +138,5 @@ body {
 
 .footer small {
     background-color: transparent;
+    font-size: 1vw;
 }
