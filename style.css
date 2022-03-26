@@ -1,0 +1,128 @@
+* {
+    margin: 0;
+    background-color: #F7F5F2;
+}
+
+body {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+/***************************************************************************/
+                            /*      HEADER      */
+/***************************************************************************/
+
+.header {
+    height: 20vh;
+    background-color: #F56D91;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 0 10%;
+    font-family: Tahoma, sans-serif;
+    border: 1px solid black;
+}
+
+.header .logo {
+    background-color: transparent;
+    height: 10vh;
+    width: 10vw;
+}
+
+.header h1 {
+    color: #F7F5F2;
+    background-color:  transparent;
+    font-size: 2em;
+    text-shadow: 1px 2px 5px black;
+}
+
+/***************************************************************************/
+                            /*      BODY        */
+/***************************************************************************/
+
+.body {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    height: 70vh;
+    gap: 0.5vw;
+}
+
+.card {
+    border: 2px solid #8D8DAA;
+    border-radius: 8px;
+    width: 22vw;
+    margin: 3vh 5vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    background-color: #DFDFDE;
+    box-shadow: 1px 1px 5px black;
+}
+
+.card h2 {
+    margin: 10% 5%;
+    font-size: 1.5vw;
+}
+
+.card:hover {
+    background-color: #dfdfdea8;
+    transform: translate(-2px, -2px);
+    transition-duration: 0.2s;
+
+    box-shadow: 2px 2px 5px black;
+}
+
+.reasons, .countdown, .dog-pic {
+    background-color: transparent;
+}
+
+.dog-pic img {
+    width: 20vw;
+    height: auto;
+    margin-bottom: 4vw;
+    border: 1px solid #8D8DAA;
+    box-shadow: 1px 1px 5px black;
+    border-radius: 8px;
+}
+
+.card-heading, .card-content {
+    background-color: transparent;
+    text-align: center;
+}
+
+.card-content {
+    margin-top: 30%;
+}
+
+#timer {
+    margin-top: 50%;
+    font-size: 2vw;
+}
+
+.body p {
+    color: #8D8DAA;
+    margin: 0 8%;
+    font-size: 2vw;
+}
+
+.reasons > .card-content {
+    margin-top: 30%;
+}
+
+/***************************************************************************/
+                            /*      FOOTER      */
+/***************************************************************************/
+
+.footer {
+    background-color: #DFDFDE;
+    height: 10vh;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 0 10%;
+}
+
+.footer small {
+    background-color: transparent;
+}
