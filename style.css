@@ -1,3 +1,8 @@
+html {
+    height: 100vh;
+    overflow-y: hidden
+}
+
 * {
     margin: 0;
     background-color: #F7F5F2;
@@ -60,21 +65,23 @@ body {
     border: 2px solid #8D8DAA;
     border-radius: 8px;
     width: 25vw;
+    height: 90%;
     margin: 3vh 1vw;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
+    align-content: center;
     box-shadow: 1px 1px 5px black;
     transition: all 0.3s ease-in;
-    min-width: 300px;
-    min-height: 90px;
-    padding-bottom: 3%;
+    min-width: 25vw;
+    min-height: 40%;
 }
 
 .card h2 {
     margin: 10% 5%;
     font-size: 1.5vw;
+    text-align: center;
 }
 
 .card:hover {
@@ -90,21 +97,32 @@ body {
 }
 
 .dog-pic img {
-    width: 20vw;
-    height: auto;
+    width: auto;
+    height: 17vw;
     border: 1px solid #8D8DAA;
     box-shadow: 1px 1px 5px black;
     border-radius: 8px;
     margin-top: 40%;
+    margin-left: auto;
+    min-width: 12vw;
 }
 
 .card-heading, .card-content {
     background-color: transparent;
     text-align: center;
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+}
+
+.card-heading h2 {
+    text-align: center;
 }
 
 .card-content {
     margin-top: 30%;
+    text-align: center;
+
 }
 
 #timer {
