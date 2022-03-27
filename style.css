@@ -1,6 +1,6 @@
 html {
     height: 100vh;
-    overflow-y: hidden
+    /* overflow-y: hidden */
 }
 
 * {
@@ -58,7 +58,7 @@ body {
     justify-content: space-around;
     flex-wrap: wrap;
     height: 70vh;
-    gap: 0.5vw;
+    gap: 1vw;
 }
 
 .card {
@@ -74,8 +74,8 @@ body {
     align-content: center;
     box-shadow: 1px 1px 5px black;
     transition: all 0.3s ease-in;
-    min-width: 25vw;
-    min-height: 40%;
+    min-height: 300px;
+    min-width: 350px;
 }
 
 .card h2 {
