@@ -9,7 +9,7 @@ var countDownDate = new Date(`Apr 2, ${yearOfNextBirthday} 00:00:00`).getTime();
 var x = setInterval(function() {
 
   // Get today's date and time
-  var now = new Date().getTime();
+  var now = new Date().getTime();  
 
   // Find the distance between now and the count down date
   var distance = countDownDate - now;
@@ -26,7 +26,7 @@ var x = setInterval(function() {
 
   // If the count down is finished, write some text
   // console.log(Math.floor(distance / (1000 * 60 * 60 * 24)));
-  if (days === 0) {
+  if (hours < 0) {
     clearInterval(x);
     document.getElementById("timer").innerHTML = "IT'S YOUR BIRTHDAY!";
   } else if (days < 0) {
