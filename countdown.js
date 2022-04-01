@@ -3,10 +3,12 @@
 let yearOfNextBirthday = 2022;
 
 // Set the date we're counting down to
-var countDownDate = new Date(`Apr 2, ${yearOfNextBirthday} 00:00:00`).getTime();
 
 // Update the count down every 1 second
-var x = setInterval(function() {
+let x = setInterval(function() {
+
+  let countDownDate = new Date(`Apr 2, ${yearOfNextBirthday} 00:00:00`).getTime();
+  const birthday = new Date(`Apr 2, ${yearOfNextBirthday}`);
 
   // Get today's date and time
   var now = new Date().getTime();  
@@ -15,22 +17,28 @@ var x = setInterval(function() {
   var distance = countDownDate - now;
 
   // Time calculations for days, hours, minutes and seconds
-  var days = Math.floor(distance / (1000 * 60 * 60 * 24));
-  var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-  var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-  var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+  let days = Math.floor(distance / (1000 * 60 * 60 * 24));
+  let hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+  let minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+  let seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
-  // Display the result in the element with id="demo"
-  document.getElementById("timer").innerHTML = days + "d " + hours + "h "
-  + minutes + "m " + seconds + "s ";
+  message = days + "d " + hours + "h " + minutes + "m " + seconds + "s <br>until your next birthday!" ;
 
-  // If the count down is finished, write some text
-  // console.log(Math.floor(distance / (1000 * 60 * 60 * 24)));
-  if (hours < 0) {
-    clearInterval(x);
-    document.getElementById("timer").innerHTML = "IT'S YOUR BIRTHDAY!";
-  } else if (days < 0) {
-    yearOfNextBirthday += 1;
-    x();
+  currentDate = new Date()
+
+  if (currentDate.getMonth() === birthday.getMonth() && currentDate.getDate() === birthday.getDate()) {
+    yearOfNextBirthday = currentDate.getFullYear() + 1;
+    clearInterval();
+    document.getElementById("timer").innerHTML = "IT'S YOUR BIRTHDAY!<br>" + message;
+  } else if (currentDate.getMonth() <= birthday.getMonth() && currentDate.getDate() < birthday.getDate() && currentDate.getFullYear() === birthday.getFullYear()) {
+    document.getElementById("timer").innerHTML = message;
+  } else if (distance < 0) {
+    yearOfNextBirthday = currentDate.getFullYear() + 1;
+  } else {
+    document.getElementById("timer").innerHTML = message;
   }
 }, 1000);
+
+function getNextBirthday() {
+
+}
