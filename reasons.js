@@ -37,7 +37,3 @@ const reasonsList = [
 const day = new Date().getDate();
 const reasonsText = document.querySelector("#reasons-text");
 reasonsText.textContent = reasonsList[day-1];
-
-
-
-
