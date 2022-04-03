@@ -28,18 +28,12 @@ let x = setInterval(function() {
 
   if (currentDate.getMonth() === birthday.getMonth() && currentDate.getDate() === birthday.getDate()) {
     yearOfNextBirthday = currentDate.getFullYear() + 1;
-    clearInterval();
     document.getElementById("timer").innerHTML = "IT'S YOUR BIRTHDAY!<br>" + message;
     document.getElementById("timer").style.marginTop = "5%";
-  } else if (currentDate.getMonth() <= birthday.getMonth() && currentDate.getDate() < birthday.getDate() && currentDate.getFullYear() === birthday.getFullYear()) {
-    document.getElementById("timer").innerHTML = message;
   } else if (distance < 0) {
     yearOfNextBirthday = currentDate.getFullYear() + 1;
   } else {
+    document.getElementById("timer").style.marginTop = "10%";
     document.getElementById("timer").innerHTML = message;
   }
 }, 1000);
-
-function getNextBirthday() {
-
-}
